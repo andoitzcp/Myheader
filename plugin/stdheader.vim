@@ -1,11 +1,11 @@
 let s:asciiart = [
-			\"        :::      ::::::::",
-			\"      :+:      :+:    :+:",
-			\"    +:+ +:+         +:+  ",
-			\"  +#+  +:+       +#+     ",
-			\"+#+#+#+#+#+   +#+        ",
-			\"     #+#    #+#          ",
-			\"    ###   ########.fr    "
+            \"      ::::::::  ::::::::: ",
+            \"    :+:    :+: :+:    :+: ",
+            \"   +:+        +:+    +:+  ",
+            \"  +#+        +#++:++#+    ",
+            \" +#+        +#+           ",
+            \"#+#    #+# #+#            ",
+            \"########  ###             ",
 			\]
 
 let s:start		= '/*'
@@ -137,13 +137,13 @@ function! s:update()
 	return 1
 endfunction
 
-function! s:stdheader()
+function! s:mydheader()
 	if s:update()
 		call s:insert()
 	endif
 endfunction
 
 " Bind command and shortcut
-command! Stdheader call s:stdheader ()
-map <F1> :Stdheader<CR>
+command! Myheader call s:myheader ()
+map <F1> :Myheader<CR>
 autocmd BufWritePre * call s:update ()
