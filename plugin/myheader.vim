@@ -137,7 +137,7 @@ function! s:update()
 	return 1
 endfunction
 
-function! s:mydheader()
+function! s:myheader()
 	if s:update()
 		call s:insert()
 	endif
